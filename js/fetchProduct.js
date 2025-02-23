@@ -6,7 +6,6 @@ export async function fetchProducts() {
     }
 
     const result = await response.json();
-    console.log(result);
     return result.data.length > 0 ? result.data : [];
   } catch (error) {
     alert("Error fetching products:");

@@ -51,7 +51,6 @@ export async function renderProducts(filterGender = "all") {
   } catch (error) {
     document.getElementById("product-grid").textContent =
       "Error fetching products. Please try again later.";
-    console.error("Error fetching products:", error);
   } finally {
     hideLoader();
   }

@@ -61,7 +61,6 @@ async function renderProductDetail() {
   } catch (error) {
     document.getElementById("product-detail").textContent =
       "Error loading product details. Please try again later.";
-    console.error("Error loading product details:", error);
   } finally {
     hideLoader();
   }
