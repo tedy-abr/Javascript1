@@ -32,6 +32,26 @@
   margin: 0;
 }
 
+.sizes-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sizes-container label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sizes-container select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
 .price-button-container {
   display: flex;
   align-items: center;

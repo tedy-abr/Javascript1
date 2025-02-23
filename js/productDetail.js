@@ -35,6 +35,26 @@ async function renderProductDetail() {
     const productDescription = document.createElement("p");
     productDescription.textContent = product.description;
 
+    const sizesContainer = document.createElement("div");
+    sizesContainer.classList.add("sizes-container");
+
+    const sizesLabel = document.createElement("label");
+    sizesLabel.textContent = "Size:";
+    sizesLabel.setAttribute("for", "size-select");
+
+    const sizeSelect = document.createElement("select");
+    sizeSelect.id = "size-select";
+
+    product.sizes.forEach((size) => {
+      const sizeOption = document.createElement("option");
+      sizeOption.value = size;
+      sizeOption.textContent = size;
+      sizeSelect.appendChild(sizeOption);
+    });
+
+    sizesContainer.appendChild(sizesLabel);
+    sizesContainer.appendChild(sizeSelect);
+
     const priceButtonContainer = document.createElement("div");
     priceButtonContainer.classList.add("price-button-container");
 
@@ -45,7 +65,12 @@ async function renderProductDetail() {
     const addToCartButton = document.createElement("button");
     addToCartButton.textContent = "Add to Cart";
     addToCartButton.addEventListener("click", () => {
-      addToCart(product);
+      const selectedSize = sizeSelect.value;
+      if (!selectedSize) {
+        alert("Please select a size before adding to cart.");
+        return;
+      }
+      addToCart({ ...product, selectedSize });
       alert("Product added to cart!");
     });
 
@@ -54,6 +79,7 @@ async function renderProductDetail() {
 
     productInfo.appendChild(productTitle);
     productInfo.appendChild(productDescription);
+    productInfo.appendChild(sizesContainer);
     productInfo.appendChild(priceButtonContainer);
 
     productDetailContainer.appendChild(productImage);
