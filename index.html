@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RainyDays | Home</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/productspage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/396ddbb80c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="js/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"
+        ><img src="images/RainyDays_Logo.png" alt=" RainyDays Logo" />
+      </a>
+      <label for="hamburger-menu">
+        <i class="fa-solid fa-bars" style="color: #000000"></i>
+      </label>
+      <input type="checkbox" id="hamburger-menu" />
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html" class="active">Home</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="filter-cart-container">
+          <div class="filter-container">
+            <span>Filter</span>
+            <select id="gender-filter">
+              <option value="all">All</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <div class="cart-container" id="cart-icon" aria-lable="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count" id="cart-count">0</span>
+          </div>
+        </div>
+        <div class="loader" id="loader">Loading...</div>
+        <div class="product-grid" id="product-grid"></div>
+      </div>
+    </main>
+  </body>
+</html>

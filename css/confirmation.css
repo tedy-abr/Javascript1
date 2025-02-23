@@ -1,0 +1,32 @@
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.continue-shopping {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #347928;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.continue-shopping:hover {
+  color: black;
+}

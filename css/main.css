@@ -1,0 +1,160 @@
+* {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/*Nav*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  height: 40px;
+}
+
+nav {
+  display: none;
+  position: fixed;
+  top: 67px;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+  background-color: white;
+}
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+#hamburger-menu {
+  display: none;
+}
+header a {
+  color: black;
+  padding: 10px;
+}
+
+nav li {
+  display: block;
+  padding: 20px 30px;
+}
+nav ul {
+  padding: 0px;
+}
+.active {
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.filter-cart-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-container span {
+  font-weight: 500;
+}
+
+.filter-container select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cart-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-container i {
+  font-size: 24px;
+  color: #000;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #347928;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+/* Loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #333;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.loader.hidden {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  /*Nav*/
+  header {
+    justify-content: start;
+  }
+  header img {
+    height: 60px;
+  }
+
+  nav {
+    display: block;
+    position: static;
+  }
+
+  nav li {
+    display: inline-block;
+    padding: 0px;
+  }
+  header label {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .filter-container {
+    width: 100%;
+  }
+
+  .filter-container select {
+    width: 100%;
+  }
+
+  .cart-container {
+    width: 100%;
+    text-align: right;
+  }
+}
