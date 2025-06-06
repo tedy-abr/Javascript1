@@ -4,6 +4,10 @@ import { showLoader, hideLoader } from "./loader.js";
 
 let products = null;
 export async function renderProducts(filterGender = "all") {
+  const errorBox = document.getElementById("error-message");
+  if (errorBox) {
+    errorBox.style.display = "none";
+  }
   try {
     showLoader();
     if (!products) {
@@ -49,8 +53,9 @@ export async function renderProducts(filterGender = "all") {
       productsContainer.appendChild(productCard);
     });
   } catch (error) {
-    document.getElementById("product-grid").textContent =
-      "Error fetching products. Please try again later.";
+    const errorBox = document.getElementById("error-message");
+    errorBox.textContent = "Error fetching products. Please try again later.";
+    errorBox.style.display = "block";
   } finally {
     hideLoader();
   }

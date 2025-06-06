@@ -7,6 +7,12 @@ const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
 
 async function renderProductDetail() {
+  const errorBox = document.getElementById("error-message");
+  if (errorBox) {
+    errorBox.style.display = "none";
+    errorBox.textContent = "";
+  }
+
   try {
     showLoader();
 
@@ -16,7 +22,6 @@ async function renderProductDetail() {
     if (!product) {
       document.getElementById("product-detail").textContent =
         "Product not found.";
-      hideLoader();
       return;
     }
 
@@ -67,11 +72,14 @@ async function renderProductDetail() {
     addToCartButton.addEventListener("click", () => {
       const selectedSize = sizeSelect.value;
       if (!selectedSize) {
-        alert("Please select a size before adding to cart.");
+        errorBox.textContent = "Please select a size before adding to cart.";
+        errorBox.style.display = "block";
         return;
       }
+
       addToCart({ ...product, selectedSize });
-      alert("Product added to cart!");
+      errorBox.textContent = " Product added to cart!";
+      errorBox.style.display = "block";
     });
 
     priceButtonContainer.appendChild(productPrice);
@@ -85,8 +93,9 @@ async function renderProductDetail() {
     productDetailContainer.appendChild(productImage);
     productDetailContainer.appendChild(productInfo);
   } catch (error) {
-    document.getElementById("product-detail").textContent =
+    errorBox.textContent =
       "Error loading product details. Please try again later.";
+    errorBox.style.display = "block";
   } finally {
     hideLoader();
   }
