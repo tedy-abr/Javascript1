@@ -60,7 +60,10 @@ h1 {
 }
 
 .quantity-control > button:hover {
-  color: black;
+  color: #347928;
+  background-color: white;
+  border: 2px solid #347928;
+  font-weight: 600;
 }
 
 .quantity-control span {
@@ -80,7 +83,10 @@ h1 {
 }
 
 .cart-item > button:hover {
-  color: black;
+  color: #d23030;
+  background-color: white;
+  border: 2px solid #347928;
+  font-weight: 600;
 }
 
 .total-price {
@@ -88,6 +94,7 @@ h1 {
   font-weight: bold;
   text-align: center;
   margin-top: 20px;
+  color: #333333;
 }
 
 #checkout-button {
@@ -102,7 +109,10 @@ h1 {
 }
 
 #checkout-button:hover {
-  color: black;
+  color: #347928;
+  background-color: white;
+  border: 2px solid #347928;
+  font-weight: 600;
 }
 
 @media (min-width: 600px) {
