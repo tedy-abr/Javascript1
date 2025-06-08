@@ -29,14 +29,16 @@ https://tedy-abr.github.io/Javascript1/
 
 ## Github repo
 
-(https://github.com/tedy-abr/Javascript1)
+https://github.com/tedy-abr/Javascript1
 
 
 ## Getting started 
 
 To run the project locally:
 1. Clone the repo:
+```bash
 git@github.com:tedy-abr/Javascript1.git
+```
 
-2. Open index.html on the browser. No build step or dependencies requird.
+3. Open index.html on the browser. No build step or dependencies requird.
 
