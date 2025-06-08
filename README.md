@@ -29,7 +29,7 @@ https://tedy-abr.github.io/Javascript1/
 
 ## Github repo
 
-https://github.com/tedy-abr/Javascript1
+(https://github.com/tedy-abr/Javascript1)
 
 
 ## Getting started 
